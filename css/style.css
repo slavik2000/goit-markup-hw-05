@@ -286,15 +286,29 @@ img {
   margin-bottom: 28px;
 }
 
-.works {
-}
-
 .list-works {
   display: flex;
 }
 
+.img-works {
+  position: relative;
+}
+
+.text-works {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(47, 48, 58, 0.8);portfolio-img
+  color: var(--color-white);
+  padding: 27px 0;
+  width: 100%;  
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
 .item-works {
   margin-left: 30px;
+  position: relative;
   /* width: calc((100% - 90px) / 3); */
 }
 .item-works:nth-child(1) {
@@ -640,11 +654,16 @@ img {
 .portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-      transition-duration: 250ms;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-img {
   display: block;
+  position: relative;
+}
+
+.portfolio-text-description{
+  opacity: 0;
 }
 /*end style portfolio */
