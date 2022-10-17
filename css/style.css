@@ -564,8 +564,8 @@ img {
   align-items: center;
   justify-content: center;
 }
-
 /* end footer */
+
 /* start backdrop */
 .backdrop{
   position: fixed;
@@ -613,15 +613,10 @@ pointer-events: none;
 
 }
 
-
 /* end backdrop */  
+
 /*start style portfolio */
-.header {
-  /* display: flex; */
-  /* padding-top: 24px; */
-  /* padding-bottom: 24px; */
-  /* align-items: center; */
-}
+
 .filter-item {
   margin-right: 8px;
 }
@@ -655,11 +650,6 @@ pointer-events: none;
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-}
-
-.content-portfolio {
-  /* padding-top: 94px; */
-  /* padding-bottom: 94px; */
 }
 
 .portfolio-content {
@@ -712,45 +702,44 @@ pointer-events: none;
 }
 
 .portfolio-wrapper::before{
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(33, 150, 243, 0.9);;
-    opacity: 0;
-    position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);;
+  opacity: 0;
+  position: absolute;
+  content: "";
 }
 
 .portfolio-wrapper:hover::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(33, 150, 243, 0.9);;
-    opacity: 1;
-    position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);;
+  opacity: 1;
+  position: absolute;
 } 
 
 .portfolio-img {
   display: block;
-  /* position: relative; */
 }
 
 .portfolio-text-description:hover{  
   opacity: 1;
 }
 
-  .portfolio-text-description {
-    font-size: 18px;
-    line-height: 1.56;
-    letter-spacing: 0.03em;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0%, -50%);
-    padding: 0 25px;
-    color: var(--color-white);  
+.portfolio-text-description {
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+  padding: 0 25px;
+  color: var(--color-white);  
+  line-height: 1.56;
 }
 
 .portfolio-item:hover .portfolio-text-description {
