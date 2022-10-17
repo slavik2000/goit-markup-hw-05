@@ -18,6 +18,8 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- <script src="./js/modal.js"></script> -->
     <title>Document</title>
   </head>
   <body>
@@ -70,7 +72,7 @@
             Ефективні рішення для <br />
             вашого бізнесу
           </h1>
-          <button class="main-button" type="button">Замовити послугу</button>
+          <button class="main-button" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
 
@@ -157,7 +159,7 @@
               <p class="text-works">Мобільні додатки</p>
             </li>
             <li class="item-works">
-              <img  
+              <img
                 class="img-works"
                 src="./images/works/work-3-min.jpg"
                 alt="цвітова гама на планшеті"
@@ -517,5 +519,34 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close-btn" data-modal-close>
+          <svg class="modal-close" width="18" height="18">
+            <use href="./images/svg/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>   
+      </div>
+    </div>
+
+    <!-- <script>
+      (() => {
+        const refs = {
+          openModalBtn: document.querySelector("[data-modal-open]"),
+          closeModalBtn: document.querySelector("[data-modal-close]"),
+          backdrop: document.querySelector("[data-backdrop]"),
+        };
+
+        refs.openModalBtn.addEventListener("click", toggleModal);
+        refs.closeModalBtn.addEventListener("click", toggleModal);
+
+        refs.backdrop.addEventListener("click", logBackdropClick);
+
+        function toggleModal() {
+          refs.modal.classList.toggle("is-hidden");
+        }
+      })();
+    </script> -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>
