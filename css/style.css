@@ -138,8 +138,8 @@ img {
 .nav-link:hover,
 .nav-link:focus {
   color: var(--color-primary-hover);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .nav-link {
@@ -148,6 +148,8 @@ img {
   padding-bottom: 32px;
   display: block;
   position: relative;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .active::after {
@@ -183,6 +185,8 @@ img {
   padding-bottom: 32px;
   display: flex;
   align-items: center;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-item:hover {
@@ -198,8 +202,6 @@ img {
 .contacts-number:hover,
 .contacts-number:focus {
   color: var(--color-primary-hover);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-mail-icon {
@@ -266,6 +268,8 @@ img {
   padding: 10px 32px;
   border-radius: 4px;
   border: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* .is-hidden{
@@ -276,8 +280,6 @@ img {
 .main-button:hover,
 .main-button:focus {
   background-color: var(--color-btn-banner-hover);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   /* transition:  250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
@@ -434,6 +436,8 @@ img {
 
 .social-list-icon {
   fill: var(--color-svg);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link {
@@ -451,6 +455,8 @@ img {
 .social-list-link:hover .social-list-icon,
 .social-list-link:focus .social-list-icon {
   fill: var(--color-white);
+
+
 }
 
 .social-list-link:hover,
@@ -502,7 +508,7 @@ img {
   fill: var(--color-primary-hover);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-} 
+}
 
 .partner-list-link:hover,
 .partner-list-link:focus {
@@ -601,7 +607,7 @@ img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 
-  transition: opacity 500ms linear, visibility 500ms linear;
+  transition: opacity 250ms linear, visibility 250ms linear;
 }
 
 .backdrop.is-hidden {
@@ -790,4 +796,3 @@ img {
   opacity: 1;
   transform: translateY(-50%);
 }
-
