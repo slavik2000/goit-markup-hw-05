@@ -150,6 +150,9 @@ img {
   position: relative;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--main-color-link);
+  transition-property: color;
+
 }
 
 .active::after {
@@ -187,6 +190,8 @@ img {
   align-items: center;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
+
 }
 
 .contacts-item:hover {
@@ -207,6 +212,9 @@ img {
 .contacts-mail-icon {
   fill: currentColor;
   margin-right: 10px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: fill;
 }
 
 .contacts-mail-icon:hover,
@@ -217,6 +225,9 @@ img {
 .contacts-number-icon {
   fill: currentColor;
   margin-right: 10px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: fill;
 }
 
 .contacts-number-icon:hover,
@@ -270,6 +281,7 @@ img {
   border: none;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
 }
 
 /* .is-hidden{
@@ -438,12 +450,13 @@ img {
   fill: var(--color-svg);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: fill;
 }
 
 .social-list-link {
   width: 44px;
   height: 44px;
-  /* background-color: var(--color-primary-hover); */
+  background-color: var(--color-white);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -451,12 +464,11 @@ img {
 
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
 }
 .social-list-link:hover .social-list-icon,
 .social-list-link:focus .social-list-icon {
   fill: var(--color-white);
-
-
 }
 
 .social-list-link:hover,
@@ -489,6 +501,9 @@ img {
 
 .partner-list-icon use {
   fill: var(--color-svg);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: fill;  
 }
 
 .partner-list-link {
@@ -500,20 +515,17 @@ img {
   border: 1px solid var(--color-svg);
   border-radius: 4px;
   transition-duration: 250ms;
-  /* border: 1px solid var(--color-primary-hover); */
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+  transition-property: border;
+} 
 .partner-list-link:hover .partner-list-icon use,
 .partner-list-link:focus .partner-list-icon use {
   fill: var(--color-primary-hover);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .partner-list-link:hover,
 .partner-list-link:focus {
   border: 1px solid var(--color-primary-hover);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* end main */
@@ -583,8 +595,6 @@ img {
 .footer-social-link:focus {
   background-color: var(--color-primary-hover);
   border-radius: 50%;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-link {
   fill: var(--color-white);
@@ -595,6 +605,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
 }
 /* end footer */
 
@@ -606,14 +619,16 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-
-  transition: opacity 250ms linear, visibility 250ms linear;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .backdrop.is-hidden {
   visibility: hidden;
   pointer-events: none;
   opacity: 0.5;
+  transition-property: opacity, visibility;
 }
 
 .modal {
@@ -665,12 +680,18 @@ img {
   background-color: var(--color-gray);
   font-size: 16px;
   line-height: 1.62;
+  color: var(--main-color-link);
   letter-spacing: 0.03em;
   cursor: pointer;
   font-family: var(--primary-font-famaly);
   border-radius: 4px;
   padding: 6px 25px;
   border: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
+  transition-property: background-color;
+
 }
 .filter-item button:hover,
 .filter-item button:focus {
@@ -678,8 +699,6 @@ img {
   color: var(--color-white);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-list {
