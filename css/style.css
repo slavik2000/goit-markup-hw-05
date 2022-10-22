@@ -152,7 +152,6 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--main-color-link);
   transition-property: color;
-
 }
 
 .active::after {
@@ -191,7 +190,6 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: color;
-
 }
 
 .contacts-item:hover {
@@ -503,7 +501,7 @@ img {
   fill: var(--color-svg);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: fill;  
+  transition-property: fill;
 }
 
 .partner-list-link {
@@ -517,7 +515,7 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: border;
-} 
+}
 .partner-list-link:hover .partner-list-icon use,
 .partner-list-link:focus .partner-list-icon use {
   fill: var(--color-primary-hover);
@@ -621,7 +619,6 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  
 }
 
 .backdrop.is-hidden {
@@ -689,10 +686,9 @@ img {
   border: none;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: color;
-  transition-property: background-color;
-
+  transition-property: color, background-color, box-shadow;
 }
+
 .filter-item button:hover,
 .filter-item button:focus {
   background-color: var(--color-primary-hover);
@@ -744,8 +740,7 @@ img {
   display: block;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+
 }
 
 .portfolio-wrapper {
@@ -772,11 +767,45 @@ img {
   opacity: 0;
 
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
   transform: translateY(40%);
 }
+/* .portfolio-thumb{
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  top:0;  
+}  
 
-.portfolio-link:hover .portfolio-wrapper::before {
+.portfolio-thumb:hover::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 0%;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 1;
+
+} */
+
+.portfolio-thumb::before {
+  /* position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  transform: translateY(40%); */
+}
+
+
+/* .portfolio-link:hover .portfolio-thumb::before {
   transform: translateY(0);
 
   position: absolute;
@@ -784,13 +813,31 @@ img {
   display: block;
   width: 100%;
   height: 100%;
-  /* height: 0%; */
 
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 1;
-
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} */
+
+.portfolio-link:hover,
+.portfolio-link:focus{
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
+.portfolio-link:hover .portfolio-wrapper::before {
+  transform: translateY(0);
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 1;
+  transition: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 
 .portfolio-img {
   display: block;
@@ -803,15 +850,15 @@ img {
   opacity: 0;
   top: 50%;
   left: 0;
-  transform: translateY(0%);
+  /* transform: translateY(50%); */
   padding: 0 25px;
   color: var(--color-white);
   line-height: 1.56;
-
-  transform: translateY(0%);
+  height: 100%;
 }
 
 .portfolio-item:hover .portfolio-text-description {
   opacity: 1;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
+  height: 0;
 }
